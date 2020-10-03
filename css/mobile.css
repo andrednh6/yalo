@@ -1,0 +1,55 @@
+@media (max-width: 850px) {
+
+  h1{
+    font-size: 32px;
+  }
+  h2{
+    font-size:20;
+  }
+ body{
+   background-color: white;
+}
+.presentacion {
+  display:inherit;
+  padding: 5%;
+  height: auto;
+  width: 300px;
+  }
+.presentacion_registro {
+    display:inherit;
+    padding: 5%;
+    height: auto;
+    width: 300px;
+    }
+.brand{
+  margin-left: 10px;
+}
+.brand_description{
+  margin-left: 10px;
+}
+.content{
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.registro{
+  width: 240px;
+  margin: 0 auto;
+}
+  /*.products{
+    display: inherit;
+    height: auto;
+  }
+  .product{
+    margin-top: auto;
+  }
+  .main_section{
+    padding: 4%;
+  }
+  .beneficios, .mentions{
+    display: inherit;
+  } */
+
+
+}

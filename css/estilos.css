@@ -1,0 +1,186 @@
+/* -----Variables*/
+/*--Colores--*/
+:root{
+--green-color: #7ACC2D;
+--blue-color:#53C0F5; 
+--letter-color:#707070;
+--grey-color:#efefef;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+html, body{
+  padding: 0px;
+  margin: 0px;
+  font-size: 12px;
+  font-family: 'Roboto',sans-serif;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:var(--blue-color);
+  padding: 10px;
+  color: white;
+  font-size:14px;
+}
+nav ul{
+  display: flex;
+}
+
+nav li{
+  padding-left: 20px;
+ /* Para quitarle el punto de la lista*/
+  list-style: none;
+}
+nav li a {
+  color: white;
+  /* Para quitar el subrayado*/
+  text-decoration: none;
+}
+/* Opciones del boton */
+nav li a:hover{
+ color:#287EA8;
+}
+h1 {
+  color: var(--blue-color);
+  font-size: 32px;
+}
+h2 {
+  color: var(--letter-color);
+  font-size:22px;
+}
+label{
+  font-size: 14px;
+}
+.brand_image a{
+  text-decoration: none;
+  color: white;
+}
+.brand_image a:hover{
+  color:#287EA8;
+}
+.presentacion {
+  height: auto;
+  background-color: var(--grey-color) ;
+  padding: 5%;
+  margin: 0 auto;
+  display: flex;
+  zoom: 1.2;
+  width: 900px;
+}
+.presentacion_registro{
+  width: 900px;
+  margin: 0 auto;
+  display: flex;
+  padding: 5%;
+}
+
+.content{
+  padding:0%;
+  width: 500px;
+  margin-left: 30px;
+}
+.login{
+  width: 179px;
+  margin: auto;
+}
+.login a{
+  text-decoration: none;
+  color: white;
+}
+.login .forgot_password {
+  color: #287EA8;
+}
+
+.brand {
+  display: flex;
+  height: fit-content;
+}
+.brand_description {
+  display: flex;
+  height: fit-content;
+}
+.new_register {
+ background-color: white;
+  padding: 1em;
+  text-align: left;
+  font-size: 17px;
+  width: 240px;
+  height: 300px;
+  border: 2px solid var(--blue-color);
+  box-shadow: 0 0 4px var(--letter-color);
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.new_register input{
+  margin-top: 5px;
+  width:95% ;
+}
+
+.crear_cuenta{
+  background-color: var(--blue-color);
+  color: var(--grey-color);
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.ingresa_button{
+  background-color: var(--green-color);
+  color: white;
+  width: 100%;
+  font-size: 15px;
+  padding: 5px;
+  border:none;
+  margin-top: 10px; 
+  border-radius: 2px;
+
+}
+.ingresa_button:hover {
+  background-color: #5E9E22;
+
+}
+
+.crearcuenta_button{
+  background-color:var(--blue-color);
+  color: white;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 15px;
+  padding: 5px;
+  border: none;
+  border-radius: 2px;
+}
+.crearcuenta_button:hover{
+  background-color:#287EA8 ;
+}
+.contactame {
+  margin: 0px;
+  background-color: #287EA8;
+  color: var(--letter-color);
+  padding: 1%;
+  text-align: center;
+  color: white;
+}
+.contact{
+  margin: 0 auto;
+  font-size: 17px;
+}
+.email{
+  margin-top: 20px;
+  font-size: 14px;
+}
+label{
+color: var(--letter-color);
+margin-bottom: 2px;
+}
+.forgot_password {
+  margin-top:100px;
+}
+input{
+  display: flex;
+  border: 1px solid var(--letter-color);
+  border-radius: 2px;
+  margin-top: 1px;
+  color: var(--letter-color);
+}
