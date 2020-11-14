@@ -1,5 +1,275 @@
 @media (max-width: 850px) {
 
+ /* -----Variables*/
+/*--Colores--*/
+:root{
+  --green-color: #ABFFE3;
+  --blue-color:#70E7F2; 
+  --darkerblue-color:#37D1FE;
+  --letter-color:#000;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Quicksand:wght@300;700&display=swap');
+  
+  
+  html, body{
+    padding: 0px;
+    margin: 0px;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+  }
+  nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:var(--blue-color);
+    padding: 10px;
+    color: white;
+    font-size:14px;
+  }
+  nav ul{
+    display: flex;
+  }
+  
+  nav li{
+    padding-left: 20px;
+   /* Para quitarle el punto de la lista*/
+    list-style: none;
+  }
+  nav li a {
+    color: white;
+    /* Para quitar el subrayado*/
+    text-decoration: none;
+  }
+  /* Opciones del boton */
+  nav li a:hover{
+   color:#287EA8;
+  }
+  
+  body .hero{
+    display: grid;
+    grid-template-columns: minmax(1024px);
+    grid-template-rows: [y0] 1fr [y1] 1fr [y2]1fr [y3] 0px;
+    align-items: center;
+  }
+  
+  body .hero .main_logo img{
+    position: absolute;
+    width: 72px;
+    margin-top: 20px;
+  }
+  
+  body .hero .main_logo{
+    margin: 0 auto;
+    justify-items: center;
+    grid-row: y0 / y1;
+  }
+  .hero{
+    padding: 40px 40px;
+  }
+  
+  body .hero h1 {
+    color: var(--letter-color);
+    font-family: 'Quicksand', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 45px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 88px 0px 4px;
+  }
+  
+  body .brand_description {
+    /*margin: 40px auto;*/
+    text-align: center;
+    grid-row: y1 / y2;
+  }
+  body .brand_what{
+    text-align: center;
+    grid-row: y2 / y3;
+    font-size: 16px;
+  }
+  body .brand_what h3{
+    font-weight: 300;
+  }
+  body .how{
+    display: grid;
+    grid-template-rows: [0]56px [1]20px [2]40px [3]56px [4]20px [5]40px [6]56px [7]20px [8]40px [9]56px [10]20px [11]40px [12]56px [13]20px [14]40px;
+    grid-gap: 4px;
+    background: linear-gradient(180deg, #37D1FE 0%, #ADFFE4 100%);
+  }
+  body .how img{
+    width: 56px;
+  }
+  body .how .patience, .patience_description, .motivation, .motivation_description, .constancy, .constancy_description{
+    margin: 0px;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+  }
+  
+  body .how .patience h4, .motivation h4, .constancy h4{
+    margin: 0px;
+  }
+  
+  body .hero h2, .learn_test h2, .hacker_style h2 {
+    color: var(--letter-color);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size:20px;
+    align-items: center;
+  }
+  body .how h4{
+    font-weight: 700;
+    font-size: 12px;
+    align-items: center;
+  }
+  body .how p{
+    font-weight: 300;
+    font-size: 12px;
+  }
+  
+  body .hero {
+    background: linear-gradient(180deg, #ABFFE3 0%, #37D1FE 100%);
+  }
+  
+  .brand_image a{
+    text-decoration: none;
+    color: white;
+  }
+  .brand_image a:hover{
+    color:#287EA8;
+  }
+  .presentacion {
+    height: auto;
+    background-color: var(--grey-color) ;
+    padding: 5%;
+    margin: 0 auto;
+    display: flex;
+    zoom: 1.2;
+    width: 900px;
+  }
+  .presentacion_registro{
+    width: 900px;
+    margin: 0 auto;
+    display: flex;
+    padding: 5%;
+  }
+  
+  .content{
+    padding:0%;
+    width: 500px;
+    margin-left: 30px;
+  }
+  .login{
+    width: 179px;
+    margin: auto;
+  }
+  .login a{
+    text-decoration: none;
+    color: white;
+  }
+  .login .forgot_password {
+    color: #287EA8;
+  }
+  
+  .brand {
+    display: flex;
+    height: fit-content;
+  }
+  
+  .new_register {
+   background-color: white;
+    padding: 1em;
+    text-align: left;
+    font-size: 17px;
+    width: 240px;
+    height: 300px;
+    border: 2px solid var(--blue-color);
+    box-shadow: 0 0 4px var(--letter-color);
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+  .new_register input{
+    margin-top: 5px;
+    width:95% ;
+  }
+  
+  .crear_cuenta{
+    background-color: var(--blue-color);
+    color: var(--grey-color);
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  .ingresa_button{
+    background-color: var(--green-color);
+    color: white;
+    width: 100%;
+    font-size: 15px;
+    padding: 5px;
+    border:none;
+    margin-top: 10px; 
+    border-radius: 2px;
+  
+  }
+  .ingresa_button:hover {
+    background-color: #5E9E22;
+  
+  }
+  
+  .crearcuenta_button{
+    background-color:var(--blue-color);
+    color: white;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 15px;
+    padding: 5px;
+    border: none;
+    border-radius: 2px;
+  }
+  .crearcuenta_button:hover{
+    background-color:#287EA8 ;
+  }
+  .contactame {
+    margin: 0px;
+    background-color: #287EA8;
+    color: var(--letter-color);
+    padding: 1%;
+    text-align: center;
+    color: white;
+  }
+  .contact{
+    margin: 0 auto;
+    font-size: 17px;
+  }
+  .email{
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  label{
+  color: var(--letter-color);
+  margin-bottom: 2px;
+  }
+  .forgot_password {
+    margin-top:100px;
+  }
+  input{
+    display: flex;
+    border: 1px solid var(--letter-color);
+    border-radius: 2px;
+    margin-top: 1px;
+    color: var(--letter-color);
+  }
+ 
+ 
+ 
+ 
+ 
+  /*
   h1{
     font-size: 32px;
   }
@@ -37,7 +307,7 @@
   width: 240px;
   margin: 0 auto;
 }
-  /*.products{
+  .products{
     display: inherit;
     height: auto;
   }

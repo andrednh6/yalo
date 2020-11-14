@@ -7,9 +7,8 @@
 --letter-color:#000;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Quicksand:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Quicksand:wght@300;700&display=swap');
+
 
 html, body{
   padding: 0px;
@@ -45,17 +44,24 @@ nav li a {
 nav li a:hover{
  color:#287EA8;
 }
+
+body .hero{
+  display: grid;
+  grid-template-columns: minmax(1024px);
+  grid-template-rows: [y0] 1fr [y1] 1fr [y2]1fr [y3] 0px;
+  align-items: center;
+}
+
 body .hero .main_logo img{
   position: absolute;
   width: 72px;
-  top: 76px;
-  display: inline-block;
+  margin-top: 20px;
 }
+
 body .hero .main_logo{
-  width: 120px;
-  height: 120px;
-  display: flex;
   margin: 0 auto;
+  justify-items: center;
+  grid-row: y0 / y1;
 }
 .hero{
   padding: 40px 40px;
@@ -71,8 +77,42 @@ body .hero h1 {
   display: flex;
   align-items: center;
   text-align: center;
-  margin: 60px 0px 80px;
+  margin: 88px 0px 4px;
 }
+
+body .brand_description {
+  /*margin: 40px auto;*/
+  text-align: center;
+  grid-row: y1 / y2;
+}
+body .brand_what{
+  text-align: center;
+  grid-row: y2 / y3;
+  font-size: 16px;
+}
+body .brand_what h3{
+  font-weight: 300;
+}
+body .how{
+  display: grid;
+  grid-template-rows: [0]56px [1]20px [2]40px [3]56px [4]20px [5]40px [6]56px [7]20px [8]40px [9]56px [10]20px [11]40px [12]56px [13]20px [14]40px;
+  grid-gap: 4px;
+  background: linear-gradient(180deg, #37D1FE 0%, #ADFFE4 100%);
+}
+body .how img{
+  width: 56px;
+}
+body .how .patience, .patience_description, .motivation, .motivation_description, .constancy, .constancy_description{
+  margin: 0px;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+body .how .patience h4, .motivation h4, .constancy h4{
+  margin: 0px;
+}
+
 
 body .hero h2, .learn_test h2, .hacker_style h2 {
   color: var(--letter-color);
@@ -91,24 +131,8 @@ body .how p{
   font-size: 12px;
 }
 
-body .presentation h3, .
-label{
-  font-size: 14px;
-}
-
-body {
-  /*font-family: montserrat;*/
-}
-
 body .hero {
-  background: linear-gradient(180deg, var(--green-color) 0%, var(--blue-color) 99.99%, var(--darkerblue-color) 100%);
-}
-
-body .presentation img {
-  width: 50%;
-  vertical-align: middle;
-  background: inherit;
-  justify-items: center;
+  background: linear-gradient(180deg, #ABFFE3 0%, #37D1FE 100%);
 }
 
 .brand_image a{
@@ -155,10 +179,7 @@ body .presentation img {
   display: flex;
   height: fit-content;
 }
-.brand_description {
-  display: flex;
-  height: fit-content;
-}
+
 .new_register {
  background-color: white;
   padding: 1em;
