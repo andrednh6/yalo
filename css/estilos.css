@@ -47,9 +47,10 @@ nav li a:hover{
 
 body .hero{
   display: grid;
-  grid-template-columns: minmax(1024px);
-  grid-template-rows: [y0] 1fr [y1] 1fr [y2]1fr [y3] 0px;
+  grid-template-columns: 0.10fr 0.25fr 0.75fr 0.20fr; 
+  grid-template-rows: [y0] 1fr [y1] 0.5fr;
   align-items: center;
+  justify-items: end;
 }
 
 body .hero .main_logo img{
@@ -59,12 +60,14 @@ body .hero .main_logo img{
 }
 
 body .hero .main_logo{
-  margin: 0 auto;
-  justify-items: center;
+  margin: 0;
+  justify-items: right;
   grid-row: y0 / y1;
+  grid-column: 2 / 3;
 }
 .hero{
   padding: 40px 40px;
+  height: 500px;
 }
 
 body .hero h1 {
@@ -83,28 +86,67 @@ body .hero h1 {
 body .brand_description {
   /*margin: 40px auto;*/
   text-align: center;
-  grid-row: y1 / y2;
+  grid-row: y0 / y1;
+  grid-column: 3 / 4;
+  margin-right: 200px;
 }
+
 body .brand_what{
   text-align: center;
-  grid-row: y2 / y3;
-  font-size: 16px;
+  grid-row: y1 / y2;
+  grid-column: 2 / 4;
+  font-size: 28px;
+  font-weight: 300;
+  margin-right: 40px;
 }
 body .brand_what h3{
   font-weight: 300;
 }
 body .how{
   display: grid;
-  grid-template-rows: [0]56px [1]20px [2]40px [3]56px [4]20px [5]40px [6]56px [7]20px [8]40px [9]56px [10]20px [11]40px [12]56px [13]20px [14]40px;
-  grid-gap: 4px;
+  grid-template-areas: "patience motivation constancy"
+                       "patience_description motivation_description constancy_description";
+  /*grid-template-rows: [0]56px [1]20px [2]40px [3]56px [4]20px [5]40px [6]56px [7]20px [8]40px [9]56px [10]20px [11]40px [12]56px [13]20px [14]40px; */
+  grid-gap: 20px;
   background: linear-gradient(180deg, #37D1FE 0%, #ADFFE4 100%);
+  align-content:baseline;
+  height: 400px;
 }
+
 body .how img{
-  width: 56px;
+  width: 80px;
 }
-body .how .patience, .patience_description, .motivation, .motivation_description, .constancy, .constancy_description{
-  margin: 0px;
-  align-items: center;
+
+body .patience{
+  display: grid;
+  grid-area: patience; 
+  justify-items: center;
+}
+body .patience_description{
+  display: grid;
+  grid-area: patience_description; 
+  justify-items: center;
+  text-align: center;
+}
+body .motivation{
+  display: grid;
+  grid-area: motivation; 
+  justify-items: center;
+}
+body .motivation_description{
+  display: grid;
+  grid-area: motivation_description; 
+  justify-content: center;
+  text-align: center;
+}
+body .constancy{
+  display: grid;
+  grid-area: constancy;
+  justify-items: center;
+}
+body .constancy_description{
+  display: grid;
+  grid-area: constancy_description;
   justify-items: center;
   text-align: center;
 }
@@ -113,27 +155,110 @@ body .how .patience h4, .motivation h4, .constancy h4{
   margin: 0px;
 }
 
+body .learn_test{
+  background: linear-gradient(180deg, #ABFFE3 0%, #37D1FE 100%);
+  display: grid;
+  grid-template-columns:  60px 400px;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  height: 900px;
+}
+
+body .learn_test h2{
+  margin: 0;
+}
+body .learn_test h3{
+  font-weight: 300;
+}
+button{
+  font-weight: 700;
+  width: 271px;
+  height: 57px;
+  background: #ADFFE4;
+  box-shadow: inset 0px 4px 4px rgba(34, 32, 32, 0.25);
+}
+
+body .learn_test .stress img {
+  width: 42px;
+}
+
+body .cta_test{
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  align-items: center;
+  justify-items: center;
+}
+
+body .stress{
+ grid-column: 1 / 2;
+ grid-row: 2 / 3;
+}
+body .stress_description{
+  grid-column: 2 / 3;
+  grid-row: 2 /3;
+  margin-right: 60px;
+}
+body .stress_description h3{
+  margin: 0;
+}
+
+body .memory{
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+body .memory img{
+  width: 42px;
+}
+body .memory_description{
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  margin-right: 60px;
+}
+body .memory_description h3{
+  margin:0;
+}
+body .test{
+  grid-column: 1 / 3;
+  grid-row: 4 / 5;
+}
+body .test_button{
+  grid-column: 1 / 3;
+  grid-row: 5 / 6;
+}
 
 body .hero h2, .learn_test h2, .hacker_style h2 {
   color: var(--letter-color);
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size:20px;
+  font-size:36px;
   align-items: center;
 }
 body .how h4{
   font-weight: 700;
-  font-size: 12px;
+  font-size: 24px;
   align-items: center;
 }
 body .how p{
   font-weight: 300;
-  font-size: 12px;
+  font-size: 18px;
 }
 
 body .hero {
   background: linear-gradient(180deg, #ABFFE3 0%, #37D1FE 100%);
 }
+
+body .hacker_style{
+  display: grid;
+  grid-gap: 20px;
+  background: linear-gradient(180deg, #37D1FE 0%, #ADFFE4 100%);
+  align-content:center;
+  justify-content: center;
+  text-align: center;
+  height: 800px;
+}
+
 
 .brand_image a{
   text-decoration: none;
@@ -213,8 +338,16 @@ body .hero {
   border:none;
   margin-top: 10px; 
   border-radius: 2px;
-
 }
+.first_account{
+  background: linear-gradient(180deg, #ABFFE3 0%, #37D1FE 100%);
+  display: grid;
+  grid-template-rows: 100px 50px 50px;
+  justify-content: center;
+  text-align: center;
+  height: 400px;
+}
+
 .ingresa_button:hover {
   background-color: #5E9E22;
 
