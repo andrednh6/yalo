@@ -17,6 +17,7 @@ html, body{
   font-weight: 300;
   font-family: 'Montserrat', sans-serif;
 }
+/*INICIO NAV BAR */
 nav{
   display: flex;
   justify-content: space-between;
@@ -29,7 +30,6 @@ nav{
 nav ul{
   display: flex;
 }
-
 nav li{
   padding-left: 20px;
  /* Para quitarle el punto de la lista*/
@@ -44,13 +44,18 @@ nav li a {
 nav li a:hover{
  color:#287EA8;
 }
+/*FIN NAV BAR */
 
+            /*INICIO DEL HERO */
 body .hero{
   display: grid;
   grid-template-columns: 0.10fr 0.25fr 0.75fr 0.20fr; 
   grid-template-rows: [y0] 1fr [y1] 0.5fr;
   align-items: center;
   justify-items: end;
+  padding: 40px 40px;
+  height: 500px;
+  background: linear-gradient(180deg, #ABFFE3 0%, #37D1FE 100%);
 }
 
 body .hero .main_logo img{
@@ -65,11 +70,6 @@ body .hero .main_logo{
   grid-row: y0 / y1;
   grid-column: 2 / 3;
 }
-.hero{
-  padding: 40px 40px;
-  height: 500px;
-}
-
 body .hero h1 {
   color: var(--letter-color);
   font-family: 'Quicksand', sans-serif;
@@ -82,7 +82,6 @@ body .hero h1 {
   text-align: center;
   margin: 88px 0px 4px;
 }
-
 body .brand_description {
   /*margin: 40px auto;*/
   text-align: center;
@@ -90,7 +89,6 @@ body .brand_description {
   grid-column: 3 / 4;
   margin-right: 200px;
 }
-
 body .brand_what{
   text-align: center;
   grid-row: y1 / y2;
@@ -102,6 +100,9 @@ body .brand_what{
 body .brand_what h3{
   font-weight: 300;
 }
+            /* FIN DEL HERO*/
+
+            /* INICIO DEL HOW*/
 body .how{
   display: grid;
   grid-template-areas: "patience motivation constancy"
@@ -116,7 +117,6 @@ body .how{
 body .how img{
   width: 80px;
 }
-
 body .patience{
   display: grid;
   grid-area: patience; 
@@ -154,11 +154,23 @@ body .constancy_description{
 body .how .patience h4, .motivation h4, .constancy h4{
   margin: 0px;
 }
+body .how h4{
+  font-weight: 700;
+  font-size: 24px;
+  align-items: center;
+}
+body .how p{
+  font-weight: 300;
+  font-size: 18px;
+}
+            /* FIN DEL HOW*/
 
+
+            /* INICIO DEL TEST*/            
 body .learn_test{
   background: linear-gradient(180deg, #ABFFE3 0%, #37D1FE 100%);
   display: grid;
-  grid-template-columns:  60px 400px;
+  grid-template-columns:  80px 500px;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   justify-content: center;
   text-align: center;
@@ -171,6 +183,7 @@ body .learn_test h2{
 }
 body .learn_test h3{
   font-weight: 300;
+  font-size: 24px;
 }
 button{
   font-weight: 700;
@@ -181,7 +194,7 @@ button{
 }
 
 body .learn_test .stress img {
-  width: 42px;
+  width: 54px;
 }
 
 body .cta_test{
@@ -190,6 +203,10 @@ body .cta_test{
   align-items: center;
   justify-items: center;
 }
+body .cta_test h3{
+font-size: 28px;
+}
+
 
 body .stress{
  grid-column: 1 / 2;
@@ -209,7 +226,7 @@ body .memory{
   grid-row: 3 / 4;
 }
 body .memory img{
-  width: 42px;
+  width: 54px;
 }
 body .memory_description{
   grid-column: 2 / 3;
@@ -227,26 +244,13 @@ body .test_button{
   grid-column: 1 / 3;
   grid-row: 5 / 6;
 }
-
-body .hero h2, .learn_test h2, .hacker_style h2 {
+            /* FIN DEL TEST*/
+body .hero h2, .learn_test h2, .hacker_style h2, .first_account h2 {
   color: var(--letter-color);
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size:36px;
   align-items: center;
-}
-body .how h4{
-  font-weight: 700;
-  font-size: 24px;
-  align-items: center;
-}
-body .how p{
-  font-weight: 300;
-  font-size: 18px;
-}
-
-body .hero {
-  background: linear-gradient(180deg, #ABFFE3 0%, #37D1FE 100%);
 }
 
 body .hacker_style{
@@ -259,6 +263,9 @@ body .hacker_style{
   height: 800px;
 }
 
+body .hacker_style p{
+  font-size: 24px;
+}
 
 .brand_image a{
   text-decoration: none;
@@ -282,7 +289,22 @@ body .hacker_style{
   display: flex;
   padding: 5%;
 }
+.first_account{
+  background: linear-gradient(180deg, #ABFFE3 0%, #37D1FE 100%);
+  display: grid;
+  grid-template-rows: 100px 50px 50px;
+  justify-content: center;
+  text-align: center;
+  height: 400px;
+  justify-items: center;
+}
 
+
+/* SECCION CREAR CUENTA 
+.ingresa_button:hover {
+  background-color: #5E9E22;
+
+}
 .content{
   padding:0%;
   width: 500px;
@@ -304,7 +326,6 @@ body .hacker_style{
   display: flex;
   height: fit-content;
 }
-
 .new_register {
  background-color: white;
   padding: 1em;
@@ -339,20 +360,6 @@ body .hacker_style{
   margin-top: 10px; 
   border-radius: 2px;
 }
-.first_account{
-  background: linear-gradient(180deg, #ABFFE3 0%, #37D1FE 100%);
-  display: grid;
-  grid-template-rows: 100px 50px 50px;
-  justify-content: center;
-  text-align: center;
-  height: 400px;
-}
-
-.ingresa_button:hover {
-  background-color: #5E9E22;
-
-}
-
 .crearcuenta_button{
   background-color:var(--blue-color);
   color: white;
@@ -366,6 +373,11 @@ body .hacker_style{
 .crearcuenta_button:hover{
   background-color:#287EA8 ;
 }
+*/
+
+/* SECCIÓN FOOTER */
+
+
 .contactame {
   margin: 0px;
   background-color: #287EA8;
@@ -386,6 +398,8 @@ label{
 color: var(--letter-color);
 margin-bottom: 2px;
 }
+
+/*
 .forgot_password {
   margin-top:100px;
 }
@@ -396,3 +410,4 @@ input{
   margin-top: 1px;
   color: var(--letter-color);
 }
+*/
