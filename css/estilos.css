@@ -117,6 +117,7 @@ body .how{
 body .how img{
   width: 80px;
 }
+
 body .patience{
   display: grid;
   grid-area: patience; 
@@ -296,6 +297,7 @@ body .hacker_style p{
   justify-content: center;
   text-align: center;
   height: 400px;
+
   justify-items: center;
 }
 

@@ -1,4 +1,4 @@
-@media (max-width: 850px) {
+@media (max-width: 1250px) {
 
  /* -----Variables*/
 /*--Colores--*/
@@ -19,6 +19,8 @@
     font-weight: 300;
     font-family: 'Montserrat', sans-serif;
   }
+
+        /* INICIO DEL NAV BAR */
   nav{
     display: flex;
     justify-content: space-between;
@@ -31,7 +33,6 @@
   nav ul{
     display: flex;
   }
-  
   nav li{
     padding-left: 20px;
    /* Para quitarle el punto de la lista*/
@@ -46,29 +47,32 @@
   nav li a:hover{
    color:#287EA8;
   }
-  
+        /* FIN DEL NAV BAR */  
+
+        /* INICIO DEL HERO */   
   body .hero{
     display: grid;
-    grid-template-columns: minmax(1024px);
     grid-template-rows: [y0] 1fr [y1] 1fr [y2]1fr [y3] 0px;
-    align-items: center;
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
-  
+  body .hero {
+    background: linear-gradient(180deg, #ABFFE3 0%, #37D1FE 100%);
+  } 
   body .hero .main_logo img{
-    position: absolute;
     width: 72px;
     margin-top: 20px;
   }
-  
+
   body .hero .main_logo{
-    margin: 0 auto;
-    justify-items: center;
     grid-row: y0 / y1;
+    grid-column: 1 / 4;
   }
   .hero{
     padding: 40px 40px;
   }
-  
+  body .hero h2{
+  }
   body .hero h1 {
     color: var(--letter-color);
     font-family: 'Quicksand', sans-serif;
@@ -81,25 +85,54 @@
     text-align: center;
     margin: 88px 0px 4px;
   }
-  
   body .brand_description {
-    /*margin: 40px auto;*/
+    margin: 0;
     text-align: center;
     grid-row: y1 / y2;
+    grid-column: 1 / 4;
   }
   body .brand_what{
     text-align: center;
     grid-row: y2 / y3;
     font-size: 16px;
+    grid-column: 1 / 4;
   }
   body .brand_what h3{
     font-weight: 300;
   }
+ /*     FIN HERO        */
+ /*     INICIO DEL HOW        */
   body .how{
     display: grid;
     grid-template-rows: [0]56px [1]20px [2]40px [3]56px [4]20px [5]40px [6]56px [7]20px [8]40px [9]56px [10]20px [11]40px [12]56px [13]20px [14]40px;
+    grid-template-columns: 1fr;
     grid-gap: 4px;
     background: linear-gradient(180deg, #37D1FE 0%, #ADFFE4 100%);
+    justify-content: center;
+  }
+  body .patience {
+    grid-row: 0 / 2;
+    grid-column: 1 / 4;
+  }
+  body .patience_description{
+    grid-row: 2 / 4;
+    grid-column: 1 / 4;
+  }
+  body .motivation{
+    grid-row: 4 / 6;
+    grid-column: 1 / 4;
+  }
+  body .motivation_description{
+    grid-row: 6 / 8;
+    grid-column: 1 / 4;
+  }
+  body .constancy{
+    grid-row: 8 / 10;
+    grid-column: 1 / 4;
+  }
+  body .constancy_description{
+    grid-row: 10 / 12;
+    grid-column: 1 / 4;
   }
   body .how img{
     width: 56px;
@@ -110,7 +143,6 @@
     justify-items: center;
     text-align: center;
   }
-  
   body .how .patience h4, .motivation h4, .constancy h4{
     margin: 0px;
   }
@@ -121,6 +153,8 @@
     font-weight: 700;
     font-size:20px;
     align-items: center;
+    display: flex;
+    justify-items: center;
   }
   body .how h4{
     font-weight: 700;
@@ -132,11 +166,78 @@
     font-size: 12px;
   }
   
-  body .hero {
-    background: linear-gradient(180deg, #ABFFE3 0%, #37D1FE 100%);
+        /* FIN DEL HOW */
+
+        /* INICIO DEL LEARN_TEST */  
+body .learn_test h3{
+  font-size: 12px;
+}
+body .learn_test{
+  height: 500px;
+}
+        body .cta_test{
+  justify-items: center;
+  display: grid;
+  grid-row: 1 / 2;
+  grid-column: 1 / 3;
+}
+body .stress{
+grid-row: 2 / 3;
+grid-column: 1 / 3;
+}
+body .stress_description{
+grid-row: 3 / 4;
+grid-column: 1 / 3;
+margin: 0;
+}
+body .memory{
+grid-row: 4 / 5;
+grid-column: 1 / 3;
+}
+body .memory_description{
+grid-row: 5 / 6;
+grid-column: 1 / 3;
+margin: 0;
+}
+body .test{
+grid-row: 6 / 7;  
+grid-column: 1 / 3;
+margin: 0;
+}
+body .test_button{
+grid-row: 7 / 8;
+grid-column: 1 / 3;
+}
+        /* FIN DEL LEARN_TEST */ 
+        /* INICIO DEL HACKER_STYLE */ 
+ body .hacker_style{
+   height: 600px;
+  justify-content: center;
   }
-  
-  .brand_image a{
+body .hacker_style h2{
+  display: grid;
+  font-size: 20px;
+}
+body .hacker_style p{
+  font-size: 14px;
+}
+        /* FIN DEL HACKER_STYLE */
+        /* INICIO DEL FIRST_ACCOUNT */ 
+body .first_account{
+height: 350px;
+}
+body .first_account h2{
+ font-size: 20px;
+}
+body .first_account h3{
+  font-size: 14px;
+ }
+ 
+        /* FIN DEL FIRST_ACCOUNT */
+
+
+
+        .brand_image a{
     text-decoration: none;
     color: white;
   }
