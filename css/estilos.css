@@ -111,7 +111,7 @@ body .how{
   grid-gap: 20px;
   background: linear-gradient(180deg, #37D1FE 0%, #ADFFE4 100%);
   align-content:baseline;
-  height: 400px;
+  height: 600px;
 }
 
 body .how img{
@@ -172,7 +172,7 @@ body .learn_test{
   background: linear-gradient(180deg, #ABFFE3 0%, #37D1FE 100%);
   display: grid;
   grid-template-columns:  80px 500px;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   justify-content: center;
   text-align: center;
   align-content: center;
@@ -186,12 +186,15 @@ body .learn_test h3{
   font-weight: 300;
   font-size: 24px;
 }
-button{
+body .test_button a{
   font-weight: 700;
+  border: 2px solid #ADFFE4 ;
   width: 271px;
   height: 57px;
+  padding: 20px;
   background: #ADFFE4;
   box-shadow: inset 0px 4px 4px rgba(34, 32, 32, 0.25);
+  text-decoration: none;
 }
 
 body .learn_test .stress img {
@@ -293,14 +296,24 @@ body .hacker_style p{
 .first_account{
   background: linear-gradient(180deg, #ABFFE3 0%, #37D1FE 100%);
   display: grid;
-  grid-template-rows: 100px 50px 50px;
-  justify-content: center;
+  grid-template-rows: 80px 40px 20px 80px;
   text-align: center;
-  height: 400px;
-
+  height: 240px;
   justify-items: center;
 }
 
+body .first_account a{
+  
+    font-weight: 700;
+    border: 2px solid #ADFFE4 ;
+    padding: 5px;
+    background: #ADFFE4;
+    box-shadow: inset 0px 4px 4px rgba(34, 32, 32, 0.25);
+    text-decoration: none;
+    align-content: center;
+    margin: auto;
+  
+}
 
 /* SECCION CREAR CUENTA 
 .ingresa_button:hover {
