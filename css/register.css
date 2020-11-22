@@ -1,12 +1,60 @@
+nav {
+  position: fixed; /*Fixed ya que queremos que la posición sea en relación al navegador*/
+  top: 0; /*El valor 0 indica que va a quedar arriba de todo*/
+  left: 0; /*Para que el menu se ubique siempre en la parte izquierda de la pantalla*/
+  width: 100%; /*100% para que ocupe todo el ancho del navegador*/
+  }
+.brand_image{
+  padding: 0px 40px;
+}
+
+nav .nav_options {
+  padding: 0px 40px;
+}
+.brand
+
 body{
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 700px;
   color: #707070;
 }
+.presentacion_registro {
+  width: 800px;
+  height: 600px;
+  margin-top: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 120px;
+  display: flex;
+  padding: 5%;
+}
+.content {
+  width: 500px;
+  margin-left: 30px;
+  margin-top: 120px;
+  align-content: center;
+}
+.new_register{
+background-color: white;
+padding: 1em;
+text-align: left;
+font-size: 17px;
+width: 240px;
+height: 312px;
+border: 2px solid var(--blue-color);
+box-shadow: 0 0 4px var(--letter-color);
+border-radius: 5px;
+margin-left: 10px;
+}
 
+.crear_cuenta{
+border: 2px solid var(--blue-color);
+background-color: var(--blue-color);
+box-shadow: 0 0 4px var(--letter-color);
+border-radius: 5px;
+margin-left: 10px;
+}
+
+/* PARTE QUE DEBE IR EN EXITO.CSS 
 .succes_container{
   width: 900px;
   margin: 0 auto;
@@ -17,3 +65,4 @@ body{
   color: #287EA8;
   text-decoration: none;
 }
+*/

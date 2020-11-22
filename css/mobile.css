@@ -245,7 +245,6 @@ body .first_account h3{
     color:#287EA8;
   }
   .presentacion {
-    height: auto;
     background-color: var(--grey-color) ;
     padding: 5%;
     margin: 0 auto;
@@ -255,15 +254,36 @@ body .first_account h3{
   }
   .presentacion_registro{
     width: 900px;
+    height: 800px;
     margin: 0 auto;
-    display: flex;
+    display: grid;
+    grid-template-rows:  1fr 1fr;
     padding: 5%;
   }
-  
+  .presentacion_registro .content .brand_register_description h2{
+    font-size: 20px;
+    color: #707070;
+  }
+
+  .content h1{
+    font-family: 'Quicksand', sans-serif;
+    color: #707070;
+  }
+
+  .content h2{
+    display: flex;
+    text-align: center;
+    font-size: 18px;
+    width: 300px;
+    color: #707070;
+  }
+
   .content{
+    display: grid;
     padding:0%;
-    width: 500px;
-    margin-left: 30px;
+    margin: 0px;
+    align-items: center;
+    justify-items: center;
   }
   .login{
     width: 179px;
@@ -288,7 +308,7 @@ body .first_account h3{
     text-align: left;
     font-size: 17px;
     width: 240px;
-    height: 300px;
+    height: 312px;
     border: 2px solid var(--blue-color);
     box-shadow: 0 0 4px var(--letter-color);
     border-radius: 5px;
