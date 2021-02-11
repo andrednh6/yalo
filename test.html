@@ -23,6 +23,41 @@
       </div> 
     </nav>
     <!-- Aqui termina el navbar -->
+  <div id="test">
+    <header>
+        <h1> Test de Estilos de Aprendizaje</h1>
+        <p> Responde con la frase que mas te identifica:</p>
+    </header>
+    
+    <h3>1. Prestar Atencion </h3>
+    <input type="radio" name="p1" value ="a">a. No me gusta participar en seminarios o cursos de formación, a menos que el tema realmente me interese.<br/>
+    <input type="radio" name="p1" value ="b">b. Con frecuencia, me ditraigo cuando el entrenador está hablando.<br/>
+    
+    <h3>2. Prestar Atencion </h3>
+    <input type="radio" name="p2" value ="a">a. Por lo general, puedo concentrarme siempre que quiero.<br/>
+    <input type="radio" name="p2" value ="b">b. Por lo general, un entonrno ruidoso me molesta y me desconcentra.<br/>
+
+    
+    
+    
+    <script>
+    const preguntas = [
+    "1 Prestar Atención",
+    "2 Prestar Atención",
+    "3 Prestar Atención"
+    ];
+    const respuestas = [
+      ["No me gusta participar en seminarios o cursos de formación, a menos que el tema realmente me interese.","Con frecuencia, me ditraigo cuando el entrenador está hablando."],
+      ["Por lo general, puedo concentrarme siempre que quiero.","Por lo general, un entonrno ruidoso me molesta y me desconcentra."],
+      ["Me gusta saber qué es lo que voy a conseguir antes de prestar toda mi atención.","Si estoy en grupo, no suelo hacer preguntas incluso aunque no comprenda."]
+  
+    ];
+  
+    const indiceAleatorio = Math.floor(Math.random()*preguntas.length);
+  
+    document.getElementById('test').innerHTML = preguntas[indiceAleatorio];
+    </script>
+  </div> 
     <footer class="contactame">
       <h4 class="contact">Contáctame</h4>
       <p class="email">andred.navarroh@gmail.com</p>
