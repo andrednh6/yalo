@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="stylesheet" href="css/mobile.css">
-  <link rel="stylesheet" href="css/animation.css">
+  
   <title>Yalo</title>
 </head>
 <body>
@@ -25,38 +25,182 @@
     <!-- Aqui termina el navbar -->
   <div id="test">
     <header>
-        <h1> Test de Estilos de Aprendizaje</h1>
+        <h1> Test Estilos de Aprendizaje</h1>
         <p> Responde con la frase que mas te identifica:</p>
     </header>
-    
-    <h3>1. Prestar Atencion </h3>
-    <input type="radio" name="p1" value ="a">a. No me gusta participar en seminarios o cursos de formación, a menos que el tema realmente me interese.<br/>
-    <input type="radio" name="p1" value ="b">b. Con frecuencia, me ditraigo cuando el entrenador está hablando.<br/>
-    
-    <h3>2. Prestar Atencion </h3>
-    <input type="radio" name="p2" value ="a">a. Por lo general, puedo concentrarme siempre que quiero.<br/>
-    <input type="radio" name="p2" value ="b">b. Por lo general, un entonrno ruidoso me molesta y me desconcentra.<br/>
+    <div id="resultado"></div>
+     <form name="quizForm" onSubmit="return verificarRespuestas()">
 
+      <h2>Prestar atención</h2>
+      <h3>1.</h3>
+      <input type="radio" name="p1" value ="a">a. No me gusta participar en seminarios o cursos de formación, a menos que el tema realmente me interese.<br/>
+      <input type="radio" name="p1" value ="b">b. Con frecuencia, me ditraigo cuando el entrenador está hablando.<br/>
     
+      <h3>2.</h3>
+      <input type="radio" name="p2" value ="a">a. Por lo general, puedo concentrarme siempre que quiero.<br/>
+      <input type="radio" name="p2" value ="b">b. Por lo general, un entonrno ruidoso me molesta y me desconcentra.<br/>
+
+      <h3>3.</h3>
+      <input type="radio" name="p3" value ="a">a. Me gusta saber qué es lo que voy a conseguir antes de prestar toda mi atención.<br/>
+      <input type="radio" name="p3" value ="b">b. Si estoy en grupo, no suelo hacer preguntas incluso aunque no comprenda.<br/>
     
-    
-    <script>
-    const preguntas = [
-    "1 Prestar Atención",
-    "2 Prestar Atención",
-    "3 Prestar Atención"
-    ];
-    const respuestas = [
-      ["No me gusta participar en seminarios o cursos de formación, a menos que el tema realmente me interese.","Con frecuencia, me ditraigo cuando el entrenador está hablando."],
-      ["Por lo general, puedo concentrarme siempre que quiero.","Por lo general, un entonrno ruidoso me molesta y me desconcentra."],
-      ["Me gusta saber qué es lo que voy a conseguir antes de prestar toda mi atención.","Si estoy en grupo, no suelo hacer preguntas incluso aunque no comprenda."]
-  
-    ];
-  
-    const indiceAleatorio = Math.floor(Math.random()*preguntas.length);
-  
-    document.getElementById('test').innerHTML = preguntas[indiceAleatorio];
-    </script>
+      <h3>4.</h3>
+      <input type="radio" name="p4" value ="a">a. Siempre que lo estimo oportuno, hago preguntas para clarificar la información.<br/>
+      <input type="radio" name="p4" value ="b">b. Con frecuencia, me dedico a hacer garabatos o dibujar.<br/>
+
+      <h3>5.</h3>
+      <input type="radio" name="p5" value ="a">a. En mi opinión, los diagramas y los modelos son útiles en la formación.<br/>
+      <input type="radio" name="p5" value ="b">b. Con frecuencia, las personas no se están quietas en el aula.<br/>
+
+      <h3>6.</h3>
+      <input type="radio" name="p6" value ="a">a. Me gusta empezar y terminar a tiempo, y trabajar duro durante la sesión.<br/>
+      <input type="radio" name="p6" value ="b">b. Con frecuecia, pienso en cosas distintas a las que se están discutiendo en el aula o seminario.<br/>
+
+      <h3>7.</h3>
+      <input type="radio" name="p7" value ="a">a. Me molestan mucho los participantes que hablan mucho y no prestan atención.<br/>
+      <input type="radio" name="p7" value ="b">b. Algunas veces, necesito que me repitan las instrucciones para las actividades.<br/>
+
+      <h3>8.</h3>
+      <input type="radio" name="p8" value ="a">a. Intento identificar la relevancia del material que me presentan.<br/>
+      <input type="radio" name="p8" value ="b">b. Muchos presentadores no consiguen captar mi atención.<br/>
+     
+      <h2>Traducir</h2>
+      <h3>9.</h3>
+      <input type="radio" name="p9" value ="c">a. Con frecuencia, pienso que las ideas de otros son más útiles o interesantes que las mías.<br/>
+      <input type="radio" name="p9" value ="d">b. En el entorno formal de formación, prefiero trabajar en grupo.<br/>
+
+      <h3>10.</h3>
+      <input type="radio" name="p10" value ="c">a. Prefiero que el entrenador especifique siempre los objetivos y los resultados/beneficios claros del aprendizaje.<br/>
+      <input type="radio" name="p10" value ="e">b. En un entorno formal de aprendizaje, prefiero trabajar por mi cuenta.<br/>
+
+      <h3>11.</h3>
+      <input type="radio" name="p11" value ="c">a. Prefiero las lecciones magistrales a las discusiones o actividades de grupo.<br/>
+      <input type="radio" name="p11" value ="e">b. Me encanta que me faciliten una amplia variedad de materiales de lectura con anterioridad al seminario.<br/>
+
+      <h3>12.</h3>
+      <input type="radio" name="p12" value ="c">a. En un entorno formal de formación, prefiero trabajar con notas de presentación y materiales bien estructurados.<br/>
+      <input type="radio" name="p12" value ="d">b. Casi siempre conoces a gente interesante en las sesiones de formación.<br/>
+
+      <h3>13.</h3>
+      <input type="radio" name="p13" value ="d">a. Disfruto con los seminarios en los que permiten el libre intercambio de ideas.<br/>
+      <input type="radio" name="p13" value ="e">b. Cuando les haces preguntas, algunos entrenadores no tienen toda la información.<br/>
+      
+      <h3>14.</h3>
+      <input type="radio" name="p14" value ="c">a. Me suelen gustar los seminarios que tienen un programa bien estructurado.<br/>
+      <input type="radio" name="p14" value ="e">b. Me resultaría muy fácil participar en cursos de aprendizaje a distancia.<br/>
+      
+      <h3>15.</h3>
+      <input type="radio" name="p15" value ="d">a. Me encanta trabajar en tareas o proyectos que involucren a una o dos personas más.<br/>
+      <input type="radio" name="p15" value ="e">b. Me gusta fijarme mis propias metas de aprendizaje.<br/>
+      
+      <h3>16.</h3>
+      <input type="radio" name="p16" value ="d">a. Con frecuencia, me ofrezco voluntario en las simulaciones que forman parte del curso de formación.<br/>
+      <input type="radio" name="p16" value ="e">b. Normalmente, puedo decidir de inmediato cuál es la información útil para mí y la que no lo es.<br/>
+      
+      <h3>17.</h3>
+      <input type="radio" name="p17" value ="c">a. Me gusta escuchar una presentación que incluye información compleja.<br/>
+      <input type="radio" name="p17" value ="e">b. Tiendo a estudiar con más eficacia cuando trabajo con otros.<br/>
+      
+      <h3>18.</h3>
+      <input type="radio" name="p18" value ="d">a. Normalmente, el aprendizaje es más eficaz cuando el tema se discute o debate en grupo.<br/>
+      <input type="radio" name="p18" value ="e">b. Me siento a gusto asumiento un rol de liderazgo en las discusiones de grupo.<br/>
+      
+      <h3>19.</h3>
+      <input type="radio" name="p19" value ="c">a. Casi nunca me siento a gusto en las sesiones de tormenta de ideas que no están bien definidas.<br/>
+      <input type="radio" name="p19" value ="e">b. Con frecuencia, hago preguntas inquisitivas e incisivas relacionadas con la información que me pressentan.<br/>
+      
+      <h3>20.</h3>
+      <input type="radio" name="p20" value ="c">a. Me gusta comprobar con otros los hechos o conclusiones derivadas del aprendizaje antes de decidir por mí mismo.<br/>
+      <input type="radio" name="p20" value ="d">b. Con frecuencia, las mejores ideas se me ocurren hablando con otros.<br/>
+     
+      <h2>Relacionar</h2>
+      <h3>21.</h3>
+      <input type="radio" name="p21" value ="f">a. Para relajarme, prefiero ver una película o una obra de teatro.<br/>
+      <input type="radio" name="p21" value ="g">b. Para relajarme prefiero escuchar música o la radio.<br/>
+
+      <h3>22.</h3>
+      <input type="radio" name="p22" value ="f">a. Si estoy perdido, o necesito instrucciones, prefiero contar con un mapa.<br/>
+      <input type="radio" name="p22" value ="h">b. Para relajarme, prefiero jugar algún juego o hacer deporte.<br/>
+
+      <h3>23.</h3>
+      <input type="radio" name="p23" value ="f">a. Me gusta que me presenten la información del seminario en diagramas e imágenes.<br/>
+      <input type="radio" name="p23" value ="h">b. Con frecuencia, me gusta hacer algo con las manos mientras estoy escuchando o hablando.<br/>
+
+      <h3>24.</h3>
+      <input type="radio" name="p24" value ="f">a. Prefiero hablar cara a cara con las personas.<br/>
+      <input type="radio" name="p24" value ="g">b. Con frecuencia, estoy impaciente por hablar y acabo las frases de otros.<br/>
+
+      <h3>25.</h3>
+      <input type="radio" name="p25" value ="g">a. Disfruto hablando con alguien por teléfono durante largos períodos de tiempo.<br/>
+      <input type="radio" name="p25" value ="h">b. Prefiero muchos descansos cortos durante el seminario, así puedo moverme.<br/>
+
+      <h3>26.</h3>
+      <input type="radio" name="p26" value ="f">a. Si estoy aburrido, tiendo a hacer garabatos o a mirar algo.<br/>
+      <input type="radio" name="p26" value ="h">b. Durante la sesión de formación, me gusta involucrarme en alguna actividad física.<br/>
+
+      <h3>27.</h3>
+      <input type="radio" name="p27" value ="g">a. Si estoy perdido o necesito instrucciones, necesito que me lo digan.<br/>
+      <input type="radio" name="p27" value ="h">b. Me cuesta mucho estarme quieto durante largos períodos de tiempo.<br/>
+
+      <h3>28.</h3>
+      <input type="radio" name="p28" value ="g">a. Me gusta escuchar una lección magistral o presentación larga.<br/>
+      <input type="radio" name="p28" value ="h">b. Si estoy perdido, o necesito instrucciones, prefiero que me enseñen cuál es el camino a seguir.<br/>
+
+      <h3>29.</h3>
+      <input type="radio" name="p29" value ="f">a. Suelo olvidar los nombres y recordar las caras.<br/>
+      <input type="radio" name="p29" value ="g">b. Mientras hacemos ejercicios de grupo en el aula de formación, la música me es muy útil.<br/>
+
+      <h3>30.</h3>
+      <input type="radio" name="p30" value ="g">a. Con frecuencia, olvido las caras pero recuerdo los nombres.<br/>
+      <input type="radio" name="p30" value ="h">b. Mientras hablo, gesticulo y soy muy expresivo.<br/>
+
+      <h3>31.</h3>
+      <input type="radio" name="p31" value ="f">a. Escuchar a otros no se me da bien.<br/>
+      <input type="radio" name="p31" value ="h">b. Me gustan las actividades y los ejercicios al aire libre, en los que puedes "ensuciarte las manos".<br/>
+
+      <h3>32.</h3>
+      <input type="radio" name="p32" value ="f">a. En mi opinión, incluir video suele ser útil en la mayoría de los seminarios.<br/>
+      <input type="radio" name="p32" value ="g">b. Algunas veces hablo conmigo mismo.<br/>
+
+      <h3>33.</h3>
+      <input type="radio" name="p33" value ="i">a. Soy capaz de ver la visión global.<br/>
+      <input type="radio" name="p33" value ="j">b. Es importante fijarse en los detalles, en la medida de lo posible.<br/>
+
+      <h2>Comprender</h2>
+      <h3>34.</h3>
+      <input type="radio" name="p34" value ="i">a. Con frecuencia, puedo establecer relaciones entre las ideas.<br/>
+      <input type="radio" name="p34" value ="j">b. Normalmente, lo mejor es centrarse y concentrarse.<br/>
+
+      <h3>35.</h3>
+      <input type="radio" name="p35" value ="i">a. Es importante leer entre líneas.<br/>
+      <input type="radio" name="p35" value ="j">b. Casi siempre puedo recordar fácilmente los hechos y las cifras.<br/>
+
+      <h3>36.</h3>
+      <input type="radio" name="p36" value ="i">a. El aprendizaje ofrece innumerables opciones y posibilidades.<br/>
+      <input type="radio" name="p36" value ="j">b. Me gusta que respondan a mis preguntas de manera directa y práctica.<br/>
+
+      <h3>37.</h3>
+      <input type="radio" name="p37" value ="i">a. La mayoría de las veces, es importante "seguir la corriente".<br/>
+      <input type="radio" name="p37" value ="j">b. Me gusta que las cosas estén ordenadas en una secuencia paso a paso.<br/>
+
+      <h3>38.</h3>
+      <input type="radio" name="p38" value ="i">a. No me gusta tener que explicarme con un elevado nivel de detalle.<br/>
+      <input type="radio" name="p38" value ="j">b. Me gusta estar preparado.<br/>
+
+      <h3>39.</h3>
+      <input type="radio" name="p39" value ="i">a. Muchas veces no sé por qué hago algunas cosas.<br/>
+      <input type="radio" name="p39" value ="j">b. Normalmente prefiero ocuparme de una sola cosa en cada momento.<br/>
+
+      <h3>40.</h3>
+      <input type="radio" name="p40" value ="i">a. Me aburro fácilmente cuando el entrenador se recrea en los detalles de menor importancia.<br/>
+      <input type="radio" name="p40" value ="j">b. Puedo sentirme frustrado cuando alguien expresa una opinión como si fuese un hecho contrastado.<br/>
+
+
+      <input type="submit" value="Enviar">
+     </form>
+
+    <script src="scripts/scrip.js"></script>
+      
   </div> 
     <footer class="contactame">
       <h4 class="contact">Contáctame</h4>
