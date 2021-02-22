@@ -2,7 +2,10 @@
 //Una vez que mande el siguiente se debe activar el siguiente form y asi dos veces mas,
 //recien al enviar deberiamos poder ver el resultado general
 
-
+function ocultarPreguntas(){
+  var quizEstilos = document.getElementById("quiz");
+  quizEstilos.style.display = 'none';
+}
 
 function verificarRespuestas() {
   const total = 40;
@@ -86,6 +89,7 @@ function verificarRespuestas() {
   resultado.innerHTML = '<span style="font-weight: 300;"> <p>Prestar atención (motivación para aprender)<br/>' + puntosTelescopica + '/8 --> Telescopica<br/>' + puntosGranAngular + '/8 --> Gran angular <br/><br/>Traducir (Dependencia - independencia en el aprendizaje)<br/>' + puntosDependiente + '/8 --> Dependiente <br/>' + puntosColaborador + '/8 --> Colaborador <br/>' + puntosAutonomo + '/8 --> Autonomo <br/><br/>Relacionar (Percepción de los datos)<br/>' + puntosVisual + '/8 --> Visual <br/>' + puntosAuditiva + '/8 --> Auditiva <br/>' + puntosCinestetica + '/8 --> Cinestética <br/><br/>Comprender (Síntesis de la información)<br/>' + puntosGlobal + '/8 --> Global <br/>' + puntosAnalitica + '/8 --> Analítica </p>';
   var explicacion = document.getElementById("explicacion");
   explicacion.innerHTML = '<h3>Prestar atención:</h3><p>Perspectiva Telescópica</br>Personas independientes del entorno y que pueden centrarse en el mensaje clave sin percatarse de algunas interferencias ambientales o distracciones.</br></br>Perspectiva Gran angular</br>Personas dependientes del entorno y muy sensibles a este. Los temas colaterales y las distracciones del entorno interfieren en el mensaje central.</p><h3>Traducir:</h3><p>Manera en la que el individuo traduce lo que ve, oye o siente en un entorno de aprendizaje, y lo hace inteligible e integra en sus modelos mentales particulares.</br></br>Dependientes</br>Prefieren la información directa del maestro o expositor, un alto nivel de estructura y objetivos claros.</br></br>Colaboradores</br>Prefieren sesiones orientadas a la discusión, tales como seminarios, estudios de casos o juegos de roles, ya que les gusta la interacción social y compartir información.</br></br>Autónomos</br>Prefieren influir en el contenido y fijan sus propias metas y objetivos. Gustan de tareas individuales o aprendizaje a distancia.</p><h3>Relacionar:</h3><p>Se centra en los canales que las personas emplean para relacionar la nueva información con la que ya cuentan. Se da mediante tres canales: auditivo, visual y cinestésico.</br></br>Auditivo</br>Agudeza auditiva, recuerda mejor lo que escucha, sensibilidad musical, habilidad verbal, saben escuchar</br></br>Visual</br>Capacidad para representar ideas gráficamente, presenta agudeza visual, fácil manejo de conceptos espaciales, recuerda mejor lo que observa</br></br>Cinestésico</br>Aprende haciendo, habilidad para expresar ideas de forma corporal, buena coordinación, flexibilidad</p><h3>Comprender:</h3> <p>Proceso de creación mental por el que, partiendo de ciertos datos aportados por un emisor, el receptor crea una imagen del mensaje que se le está transmitiendo.</br></br>Procesamiento Global</br>Ven la visión global, las relaciones, cooperan en los esfuerzos de grupo, leen entre líneas, identifican numerosas opciones, parafrasean, hacen varias cosas al mismo tiempo, leen el lenguaje corporal, involucran a otros.</br></br>Procesamiento Analítico</br>Prefieren que les presenten primero los hechos, un mayor nivel de estructura y formalidad en su aprendizaje. Son detallistas, se centran, son organizadores, recuerdan detalles, ofrecen respuestas directas, coherentes, objetivos, competitivos a nivel individual, hacen las cosas una a una</p>'
+  ocultarPreguntas();
   return false
 }
   
