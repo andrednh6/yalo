@@ -439,6 +439,7 @@ p {
 
 #resultado {
   color: #000;
+  display: grid;
   text-align: center;
 }
 
